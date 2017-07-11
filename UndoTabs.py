@@ -33,13 +33,13 @@ class ScbUndoTabCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         global ScbStackData
-        debug_write("UndoTabCommand stack  " +
+        # scb_debug_write("UndoTabCommand stack  " +
                     ('empty' if ScbStackData.isEmpty() else ''))
         if not ScbStackData.isEmpty():
-            pop = ScbStackData.peek()
-            scb_debug_write("peek " + pop)
-            window = sublime.active_window()
-            window_id = window.id()
+            pop=ScbStackData.peek()
+            # scb_debug_write("peek " + pop)
+            window=sublime.active_window()
+            window_id=window.id()
             if pop != None:
                 window.open_file(ScbStackData.pop(),
                                  sublime.ENCODED_POSITION)
@@ -49,12 +49,12 @@ class UndoTabEventListener(sublime_plugin.EventListener):
 
     def on_close(self, view):
         global ScbStackData
-        scb_debug_write("Adding to statck " +
+        # scb_debug_write("Adding to statck " +
                         ('none' if None == view.file_name() else view.file_name()))
         if view.file_name() != None:
-            view_sel = view.sel()
-            row, col = view.rowcol(view_sel[0].begin())
-            current_location = "%s:%d" % (view.file_name(), row + 1)
+            view_sel=view.sel()
+            row, col=view.rowcol(view_sel[0].begin())
+            current_location="%s:%d" % (view.file_name(), row + 1)
 
             ScbStack.push(ScbStackData, current_location)
 
