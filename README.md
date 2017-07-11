@@ -52,7 +52,7 @@ The "Packages" directory is located at:
 Usage
 -----
 
-You can set up your own key combo for this, by going to Preferences -> Key Bindings - User, and adding a command in that huge array: `{ "keys": ["ctrl+shift+t"], "command": "scb_undo_tab" },`. Default keybinding is `ctrl+shift+t`. You can use any other key you want, thought most of them are already taken.
+You can set up your own key combo for this, by going to Preferences -> Key Bindings - User, and adding a command in that huge array: `{ "keys": ["ctrl+shift+semicolon"], "command": "scb_undo_tab" },`. Default keybinding is `ctrl+shift+semicolon`. You can use any other key you want, thought most of them are already taken.
 
 
 Pull requests are welcome.
