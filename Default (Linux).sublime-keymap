@@ -1,3 +1,3 @@
 [
-	{ "keys": ["ctrl+shift+<"], "command": "scb_undo_tab"}
+	{ "keys": ["ctrl+shift+semicolon"], "command": "scb_undo_tab"}
 ]
